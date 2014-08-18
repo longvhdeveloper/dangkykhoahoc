@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  #get 'students/index'
+  #get 'index' => 'students#index'
+  #get 'register' => 'students#register'
+  #post 'signup' => 'students#signup'
+  match '/login' => 'students#login', via: [:get, :post]
+
+  resources :students do
+    collection do
+      get 'index'
+      post 'signup'
+      get 'register'
+      post 'login'
+      get 'login'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

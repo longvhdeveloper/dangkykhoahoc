@@ -1,0 +1,19 @@
+<!--<form action="signup" method="post">-->
+<%= form_tag 'login' , method: :post do%>
+    <table style="margin: 50px auto;background: #ccc;">
+      <caption style="margin-bottom:5px;"><h2>Login</h2></caption>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" name="email" /></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" name="password" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" name="fsubmit" value="Sign up" /></td>
+      </tr>
+    </table>
+    <!--</form>-->
+<% end %>
